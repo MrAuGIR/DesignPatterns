@@ -12,7 +12,7 @@ class LiasseClient extends AbstractLiasse
         $liasseVierge = LiasseVierge::getInstance();
         foreach ($liasseVierge->getDocuments() as $document) {
             /** @var \App\Services\DesignPatternPrototype\Document\AbstractDocument $document */
-            $copieDocument = $document->dupliqua();
+            $copieDocument = $document->dupliquate();
             $copieDocument->remplit($information);
             $this->documents[] = $copieDocument;
         }

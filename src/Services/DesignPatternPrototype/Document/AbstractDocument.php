@@ -6,7 +6,7 @@ abstract class AbstractDocument
 {
     protected string $content;
 
-    public function dupliqua():self{
+    public function dupliquate():self{
         return clone $this;
     }
 
