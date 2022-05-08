@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\DesignPatternStructuration\DesignPatternAdpater;
+namespace App\Services\DesignPatternStructuration\DesignPatternAdapter;
 
 /**
  * Class representant le composant tierce de l'application

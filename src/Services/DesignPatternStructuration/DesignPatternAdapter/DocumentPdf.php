@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\DesignPatternStructuration\DesignPatternAdpater;
+namespace App\Services\DesignPatternStructuration\DesignPatternAdapter;
 
 class DocumentPdf implements DocumentInterface
 {
