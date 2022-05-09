@@ -28,6 +28,6 @@ class ComposantPdf
     }
 
     public function pdfEnvoieImprimante():void{
-        echo "Impression PDF : $this->contenu "."<br>".PHP_EOL;
+        echo "Impression PDF : ".$this->contenu."<br>".PHP_EOL;
     }
 }
