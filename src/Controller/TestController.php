@@ -15,6 +15,9 @@ use App\Services\DesignPatternStructuration\DesignPatternBridge\FormImmatriculat
 use App\Services\DesignPatternStructuration\DesignPatternBridge\FormQt;
 use App\Services\DesignPatternStructuration\DesignPatternComposite\SocieteMere;
 use App\Services\DesignPatternStructuration\DesignPatternComposite\SocieteSansFiliale;
+use App\Services\DesignPatternStructuration\DesignPatternDecorator\MarqueDecorateur;
+use App\Services\DesignPatternStructuration\DesignPatternDecorator\ModeleDecorateur;
+use App\Services\DesignPatternStructuration\DesignPatternDecorator\VueVehicule;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -90,5 +93,14 @@ class TestController extends AbstractController
 
         echo sprintf("Coût entretien total du groupe : %s ".PHP_EOL,$coutEntretien);
         die();
+    }
+
+    #[Route("/test/pattern/decorateur","test_design_decorateur")]
+    public function testDecorateurAction(Request $request){
+        $vueVehicule = new VueVehicule();
+
+        $modelDecorateur = new ModeleDecorateur($vueVehicule);
+        $marqueDecorateur = new MarqueDecorateur($modelDecorateur);
+        $marqueDecorateur->affiche();
     }
 }
